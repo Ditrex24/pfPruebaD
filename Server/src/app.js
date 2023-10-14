@@ -22,17 +22,17 @@ const storage = multer.memoryStorage(); // Almacenamiento en memoria (puedes cam
 const server = express();
 
 const corsOptions = {
-	origin: '*',
+	origin: 'https://pf-prueba-pfran9yal-ditrex24s-projects.vercel.app',
 	methods: 'GET, POST, OPTIONS, PUT, DELETE',
 	allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept', // Solo permite estos encabezados
 	credentials: true, // Permite enviar cookies
 };
 
+server.use(cors(corsOptions));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(cookieParser('inmuebles360'));
 server.use(morgan('dev'));
-server.use(cors(corsOptions));
 
 //CONFIG DE EXPRESS-SESSION
 server.use(

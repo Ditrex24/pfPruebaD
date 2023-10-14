@@ -1,29 +1,10 @@
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [React()],
+  plugins: [react()],
   server: {
     port: 3000,
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
-  build: {
-    rollupOptions: {
-      plugins: [
-        {
-          name: 'custom-resolver',
-          resolveId(id) {
-            // Personaliza la resolución para ciertos módulos
-            if (id.startsWith('@/')) {
-              return path.resolve(__dirname, 'src', id.slice(2));
-            }
-            return null;
-          },
-        },
-      ],
-    },
-  },
-});
+})

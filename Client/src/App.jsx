@@ -21,7 +21,7 @@ import PaymentForm from './components/PaymentForm/PaymentForm';
 import GestionUser from './views/gestionUser/GestionUser'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://proyectofinalbackend-production-ad91.up.railway.app'
+axios.defaults.baseURL = 'http://localhost:3001'
 
 
 function App() {

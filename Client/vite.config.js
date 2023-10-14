@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [React()],
   server: {
     port: 3000,
   },

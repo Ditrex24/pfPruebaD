@@ -22,10 +22,11 @@ const storage = multer.memoryStorage(); // Almacenamiento en memoria (puedes cam
 const server = express();
 
 const corsOptions = {
-	origin: 'https://pf-prueba-pfran9yal-ditrex24s-projects.vercel.app',
+	origin: '*',
 	methods: 'GET, POST, OPTIONS, PUT, DELETE',
 	allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept', // Solo permite estos encabezados
 	credentials: true, // Permite enviar cookies
+	optionsSuccessStatus: 204
 };
 
 server.use(cors(corsOptions));

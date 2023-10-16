@@ -21,7 +21,7 @@ import PaymentForm from './components/PaymentForm/PaymentForm';
 import GestionUser from './views/gestionUser/GestionUser'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://pfpruebad-production.up.railway.app/'
+axios.defaults.baseURL = 'https://pfpruebad-production.up.railway.app'
 
 
 function App() {
